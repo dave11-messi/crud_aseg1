@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Equipo - Mi Fulbito</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <h1>Agregar Nuevo Equipo</h1>
+    <form method="POST">
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre"><br>
+        <label>Entrenador:</label><br>
+        <input type="text" name="entrenador"><br>
+        <label>Ciudad:</label><br>
+        <input type="text" name="ciudad"><br>
+        <label>Estadio:</label><br>
+        <input type="text" name="estadio"><br><br>
+        <input type="submit" value="Agregar">
+    </form>
+</body>
+</html>

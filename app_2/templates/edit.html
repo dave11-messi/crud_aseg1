@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Equipo - Mi Fulbito</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <h1>Editar Equipo</h1>
+    <form method="POST">
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" value="{{ equipo.nombre }}"><br>
+        <label>Entrenador:</label><br>
+        <input type="text" name="entrenador" value="{{ equipo.entrenador }}"><br>
+        <label>Ciudad:</label><br>
+        <input type="text" name="ciudad" value="{{ equipo.ciudad }}"><br>
+        <label>Estadio:</label><br>
+        <input type="text" name="estadio" value="{{ equipo.estadio }}"><br><br>
+        <input type="submit" value="Actualizar">
+    </form>
+</body>
+</html>

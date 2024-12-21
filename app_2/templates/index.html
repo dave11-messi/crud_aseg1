@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Fulbito - Equipos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <h1>Equipos Registrados</h1>
+    <a href="{{ url_for('add_equipo') }}">Agregar Equipo</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Entrenador</th>
+            <th>Ciudad</th>
+            <th>Estadio</th>
+            <th>Acciones</th>
+        </tr>
+        {% for equipo in equipos %}
+        <tr>
+            <td>{{ equipo.id }}</td>
+            <td>{{ equipo.nombre }}</td>
+            <td>{{ equipo.entrenador }}</td>
+            <td>{{ equipo.ciudad }}</td>
+            <td>{{ equipo.estadio }}</td>
+            <td>
+                <a href="{{ url_for('edit_equipo', id=equipo.id) }}">Editar</a>
+                <a href="{{ url_for('delete_equipo', id=equipo.id) }}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
