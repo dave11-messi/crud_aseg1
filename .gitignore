@@ -1,0 +1,9 @@
+# Entorno virtual
+app_2/
+# Archivos y carpetas específicas de Python
+__pycache__/
+*.pyc
+*.pyo
+# Configuración del IDE
+.vscode/
+.idea/
